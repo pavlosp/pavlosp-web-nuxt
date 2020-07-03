@@ -50,6 +50,21 @@ export default {
     return {
       page
     };
+  },
+
+  data () {
+    return {
+      title: 'Pavlos Papaefstathiou'
+    }
+  },
+
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        { hid: 'description', name: 'description', content: 'Pavlos Papaefstathiou; homepage' }
+      ]
+    }
   }
 };
 </script>
