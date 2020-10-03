@@ -4,7 +4,7 @@
       <div class="hero-video">
         <video id="bgvid" poster="~assets/pavlosp-profile-still.jpg" playsinline autoplay muted loop>
           <source src="~assets/pavlosp-profile-video.webm" type="video/webm">
-          <source src="~assets/pavlosp-profile-video-h265.mp4" type="video/mp4">
+          <source src="~assets/pavlosp-profile-video-h264.mp4" type="video/mp4">
         </video>
       </div>
       <div class="hero-body">
