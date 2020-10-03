@@ -3,8 +3,8 @@
     <section class="hero is-primary is-fullheight">
       <div class="hero-video">
         <video id="bgvid" poster="~assets/pavlosp-profile-still.jpg" playsinline autoplay muted loop>
-          <source src="~assets/pavlosp-background-h264.webm" type="video/webm">
-          <source src="~assets/pavlosp-background-h264.mp4" type="video/mp4">
+          <source src="~assets/pavlosp-profile-video.webm" type="video/webm">
+          <source src="~assets/pavlosp-profile-video-h265.mp4" type="video/mp4">
         </video>
       </div>
       <div class="hero-body">
@@ -60,6 +60,8 @@
 </template>
 
 <script>
+import vhCheck from 'vh-check';
+
 export default {
   async asyncData({ $content, params, error }) {
     const page = await $content('index')
@@ -69,8 +71,12 @@ export default {
       });
 
     return {
-      page
+      page,
     };
+  },
+
+  mounted() {
+    const vhTest = vhCheck();
   },
 
   data() {
@@ -95,6 +101,10 @@ export default {
 </script>
 
 <style>
+.hero .is-fullheight {
+  height: 100vh;
+}
+
 .hero-video video {
   position: relative;
   left: auto;
