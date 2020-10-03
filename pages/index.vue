@@ -2,11 +2,9 @@
   <div>
     <section class="hero is-primary is-fullheight">
       <div class="hero-video">
-        <video id="bgvid" poster="~assets/texture.png" playsinline autoplay muted loop>
-          <source
-            src="~assets/pavlosp-background-h264.mp4"
-            type="video/mp4"
-          >
+        <video id="bgvid" poster="~assets/pavlosp-profile-still.jpg" playsinline autoplay muted loop>
+          <source src="~assets/pavlosp-background-h264.webm" type="video/webm">
+          <source src="~assets/pavlosp-background-h264.mp4" type="video/mp4">
         </video>
       </div>
       <div class="hero-body">
