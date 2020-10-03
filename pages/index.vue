@@ -1,24 +1,45 @@
 <template>
   <div>
-    <section class="hero is-primary is-medium has-background">
+    <section class="hero is-primary is-fullheight">
+      <div class="hero-video">
+        <video id="bgvid" poster="assets/texture.png" playsinline autoplay muted loop>
+          <source src="http://dl5.webmfiles.org/big-buck-bunny_trailer.webm" type="video/webm">
+          <source
+            src="http://video.blendertestbuilds.de/download.blender.org/peach/trailer_480p.mov"
+            type="video/mp4"
+          >
+        </video>
+      </div>
       <div class="hero-body">
         <div class="container">
-          <h1 class="title">
-            {{ page.title }}
-          </h1>
-          <h2 class="subtitle">
-            {{ page.description }}
-          </h2>
+          <h1 class="title">{{ page.title }}</h1>
+          <h2 class="subtitle">{{ page.description }}</h2>
         </div>
       </div>
       <div class="hero-foot">
-        <nav class="tabs">
+        <nav class="tabs is-large">
           <div class="container">
             <ul>
-              <li><a href="https://www.instagram.com/thepavlosp/" target="_blank"><i class="fab fa-instagram" /></a></li>
-              <li><a href="https://twitter.com/thepavlosp" target="_blank"><i class="fab fa-twitter" /></a></li>
-              <li><a href="https://www.linkedin.com/in/pavlospapaefstathiou/" target="_blank"><i class="fab fa-linkedin-in" /></a></li>
-              <li><a href="https://pavlosp.myportfolio.com/" target="_blank">Portfolio</a></li>
+              <li>
+                <a href="https://www.instagram.com/thepavlosp/" target="_blank">
+                  <i class="fab fa-instagram" />
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/thepavlosp" target="_blank">
+                  <i class="fab fa-twitter" />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/pavlospapaefstathiou/" target="_blank">
+                  <i class="fab fa-linkedin-in" />
+                </a>
+              </li>
+              <li>
+                <a href="https://pavlosp.myportfolio.com/" target="_blank">
+                  <i class="far fa-images" />
+                </a>
+              </li>
             </ul>
           </div>
         </nav>
@@ -44,7 +65,7 @@ export default {
     const page = await $content('index')
       .fetch()
       .catch(() => {
-        error({ statusCode: 404, message: 'Page not found' })
+        error({ statusCode: 404, message: 'Page not found' });
       });
 
     return {
@@ -52,27 +73,33 @@ export default {
     };
   },
 
-  data () {
+  data() {
     return {
       title: 'Pavlos Papaefstathiou'
-    }
+    };
   },
 
-  head () {
+  head() {
     return {
       title: this.title,
       meta: [
-        { hid: 'description', name: 'description', content: 'Pavlos Papaefstathiou; homepage' }
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Pavlos Papaefstathiou; homepage'
+        }
       ]
-    }
+    };
   }
 };
 </script>
 
-<style lang="sass">
-.hero
-  &.has-background
-    background-image: url("~assets/texture.png")
-    background-repeat: repeat
-
+<style>
+.hero-video video {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  object-fit: cover;
+}
 </style>
