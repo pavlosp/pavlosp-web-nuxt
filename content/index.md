@@ -1,6 +1,6 @@
 ---
 title: 'Hello. I am Pavlos Papaefstathiou →'
-description: 'I''m a tech strategist, management consultant, avid photographer and visual storyteller'
+description: 'I''m a tech strategist & consultant, avid photographer and visual storyteller'
 ---
 Nice to e-meet you. I am a **management and strategy consultant** at 
 **[Boston Consulting Group](https://www.bcg.com)**, based in London.

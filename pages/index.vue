@@ -2,10 +2,9 @@
   <div>
     <section class="hero is-primary is-fullheight">
       <div class="hero-video">
-        <video id="bgvid" poster="assets/texture.png" playsinline autoplay muted loop>
-          <source src="http://dl5.webmfiles.org/big-buck-bunny_trailer.webm" type="video/webm">
+        <video id="bgvid" poster="~assets/texture.png" playsinline autoplay muted loop>
           <source
-            src="http://video.blendertestbuilds.de/download.blender.org/peach/trailer_480p.mov"
+            src="~assets/pavlosp-background-h264.mp4"
             type="video/mp4"
           >
         </video>
@@ -17,6 +16,13 @@
         </div>
       </div>
       <div class="hero-foot">
+        <div class="arrow bounce">
+          <p class="fas fa-chevron-down fa-2x" />
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
         <nav class="tabs is-large">
           <div class="container">
             <ul>
@@ -43,10 +49,6 @@
             </ul>
           </div>
         </nav>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container">
         <div class="columns">
           <div class="column is-8 is-offset-2">
             <div class="content">
@@ -101,5 +103,30 @@ export default {
   top: auto;
   transform: none;
   object-fit: cover;
+}
+
+.hero-video {
+  display: inline;
+}
+
+.arrow {
+  text-align: center;
+}
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
 }
 </style>
