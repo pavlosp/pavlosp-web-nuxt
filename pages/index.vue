@@ -2,7 +2,7 @@
   <div>
     <section class="hero is-primary is-fullheight">
       <div class="hero-video">
-        <video id="bgvid" poster="~assets/pavlosp-profile-still.jpg" playsinline autoplay muted loop>
+        <video id="bgvid" poster="images/pavlosp-profile-still.jpg" playsinline autoplay muted loop>
           <source src="~assets/pavlosp-profile-video.webm" type="video/webm">
           <source src="~assets/pavlosp-profile-video-h264.mp4" type="video/mp4">
         </video>
@@ -14,7 +14,7 @@
         </div>
       </div>
       <div class="hero-foot">
-        <div class="arrow bounce">
+        <div class="arrow bounce has-text-centered">
           <p class="fas fa-chevron-down fa-2x" />
         </div>
       </div>
@@ -76,12 +76,13 @@ export default {
   },
 
   mounted() {
-    const vhTest = vhCheck();
+    this.vhTest = vhCheck();
   },
 
   data() {
     return {
-      title: 'Pavlos Papaefstathiou'
+      title: 'Pavlos Papaefstathiou',
+      vhTest: { },
     };
   },
 
@@ -101,15 +102,8 @@ export default {
 </script>
 
 <style>
-.hero .is-fullheight {
-  height: 100vh;
-}
 
 .hero-video video {
-  position: relative;
-  left: auto;
-  top: auto;
-  transform: none;
   object-fit: cover;
 }
 
@@ -117,9 +111,6 @@ export default {
   display: inline;
 }
 
-.arrow {
-  text-align: center;
-}
 .bounce {
   -moz-animation: bounce 2s infinite;
   -webkit-animation: bounce 2s infinite;
