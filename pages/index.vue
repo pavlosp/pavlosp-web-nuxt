@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="hero is-primary is-fullheight">
+    <section class="hero is-primary is-fullheight vh-fix">
       <div class="hero-video">
         <video id="bgvid" poster="images/pavlosp-profile-still.jpg" playsinline autoplay muted loop>
           <source src="~assets/pavlosp-profile-video.webm" type="video/webm">
@@ -101,7 +101,7 @@ export default {
 }
 
 .hero-video {
-  display: inline;
+  display: flex;
 }
 
 .bounce {
@@ -122,10 +122,94 @@ export default {
   }
 }
 
-.hero .is-fullheight {
-  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
-  height: -webkit-fill-available;
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
+/** 
+ * iPhone 6-8 with portrait orientation.
+ */
+@media all and (device-width: 375px) and (device-height: 667px) and (orientation:portrait){
+  .hero.is-fullheight.vh-fix {
+    min-height: 550px;
+  }
 }
+
+/** 
+ * iPhone 8 Plus with portrait orientation.
+ */
+@media all and (device-width: 414px) and (device-height: 736px) and (orientation:portrait){
+  .hero.is-fullheight.vh-fix {
+    min-height: 619px;
+  }
+}
+
+/** 
+ * iPhone Xr / Xs Max / 11 / 11 Pro Max with portrait orientation.
+ */
+@media all and (device-width: 414px) and (device-height: 896px) and (orientation:portrait){
+  .hero.is-fullheight.vh-fix {
+    min-height: 779px;
+  }
+}
+
+/** 
+ * iPhone Xs / 11 Pro with portrait orientation.
+ */
+@media all and (device-width: 375px) and (device-height: 812px) and (orientation:portrait){
+  .hero.is-fullheight.vh-fix {
+    min-height: 695px;
+  }
+}
+
+/** 
+ * iPad / iPad 2 / ... with portrait orientation.
+ */
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
+  .hero.is-fullheight.vh-fix {
+    min-height: 900px;
+  }
+}
+
+/** 
+ * iPad / iPad 2 / ... with landscape orientation.
+ */
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
+  .hero.is-fullheight.vh-fix {
+    min-height: 645px;
+  }
+}
+
+/** 
+ * iPad Pro 10.5 / Pro 11 with portrait orientation.
+ */
+@media all and (device-width: 834px) and (device-height: 1112px) and (orientation:portrait){
+  .hero.is-fullheight.vh-fix {
+    min-height: 990px;
+  }
+}
+
+/** 
+ * iPad Pro 10.5 / Pro 11 with landscape orientation.
+ */
+@media all and (device-width: 834px) and (device-height: 1112px) and (orientation:landscape){
+  .hero.is-fullheight.vh-fix {
+    min-height: 714px;
+  }
+}
+
+/** 
+ * iPad 2019 with portrait orientation.
+ */
+@media all and (device-width: 810px) and (device-height: 1080px) and (orientation:portrait){
+  .hero.is-fullheight.vh-fix {
+    min-height: 960px;
+  }
+}
+
+/** 
+ * iPad 2019 with landscape orientation.
+ */
+@media all and (device-width: 810px) and (device-height: 1080px) and (orientation:landscape){
+  .hero.is-fullheight.vh-fix {
+    min-height: 690px;
+  }
+}
+
 </style>
