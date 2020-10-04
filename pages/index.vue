@@ -79,6 +79,20 @@ export default {
     };
   },
 
+  mounted() {
+    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+    let vh = window.innerHeight * 0.01;
+    // Then we set the value in the --vh custom property to the root of the document
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+    // We listen to the resize event
+    window.addEventListener('resize', () => {
+      // We execute the same script as before
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
+  },
+
   head() {
     return {
       title: this.title,
@@ -122,25 +136,8 @@ export default {
   }
 }
 
-/* fixiing vh feature on iOS */
-@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
-  .is-fullheight {
-    height: 1024px;
-  }
-}
-
-/* iPad with landscape orientation. */
-@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {
-  .is-fullheight {
-      height: 768px;
-  }
-}
-
-/* iPhone 5 
-You can also target devices with aspect ratio. */
-@media screen and (device-aspect-ratio: 40/71) {
-  .is-fullheight {
-    height: 500px;
-  }
+.is-fullheight {
+  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
 }
 </style>
