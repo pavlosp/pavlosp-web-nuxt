@@ -163,7 +163,7 @@ export default {
  */
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
   .hero.is-fullheight.vh-fix {
-    min-height: 900px;
+    min-height: 899px;
   }
 }
 
@@ -172,43 +172,79 @@ export default {
  */
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
   .hero.is-fullheight.vh-fix {
-    min-height: 645px;
+    min-height: 643px;
   }
 }
 
 /** 
- * iPad Pro 10.5 / Pro 11 with portrait orientation.
+ * iPad Pro 12.9 all gen with portrait orientation.
+ */
+@media all and (device-width: 1024px) and (device-height: 1366px) and (orientation:portrait){
+  .hero.is-fullheight.vh-fix {
+    min-height: 1241px;
+  }
+}
+
+/** 
+ * iPad Pro 12.9 all gen with landscape orientation.
+ */
+@media all and (device-width: 1024px) and (device-height: 1366px) and (orientation:landscape){
+  .hero.is-fullheight.vh-fix {
+    min-height: 899px;
+  }
+}
+
+/** 
+ * iPad Pro 2nd gen 10.5 / iPad Air 3rd Gen with portrait orientation.
  */
 @media all and (device-width: 834px) and (device-height: 1112px) and (orientation:portrait){
   .hero.is-fullheight.vh-fix {
-    min-height: 990px;
+    min-height: 987px;
   }
 }
 
 /** 
- * iPad Pro 10.5 / Pro 11 with landscape orientation.
+ * iPad Pro 2nd gen 10.5 / iPad Air 3rd Gen with landscape orientation.
  */
 @media all and (device-width: 834px) and (device-height: 1112px) and (orientation:landscape){
   .hero.is-fullheight.vh-fix {
-    min-height: 714px;
+    min-height: 709px;
   }
 }
 
 /** 
- * iPad 2019 with portrait orientation.
+ * iPad Pro 3rd Gen 11'' with portrait orientation.
+ */
+@media all and (device-width: 834px) and (device-height: 1194px) and (orientation:portrait){
+  .hero.is-fullheight.vh-fix {
+    min-height: 1069px;
+  }
+}
+
+/** 
+ * iPad Pro 3rd Gen 11'' with landscape orientation.
+ */
+@media all and (device-width: 834px) and (device-height: 1194px) and (orientation:landscape){
+  .hero.is-fullheight.vh-fix {
+    min-height: 709px;
+  }
+}
+
+/** 
+ * iPad 7th gen with portrait orientation.
  */
 @media all and (device-width: 810px) and (device-height: 1080px) and (orientation:portrait){
   .hero.is-fullheight.vh-fix {
-    min-height: 960px;
+    min-height: 955px;
   }
 }
 
 /** 
- * iPad 2019 with landscape orientation.
+ * iPad 7th gen with landscape orientation.
  */
 @media all and (device-width: 810px) and (device-height: 1080px) and (orientation:landscape){
   .hero.is-fullheight.vh-fix {
-    min-height: 690px;
+    min-height: 685px;
   }
 }
 
