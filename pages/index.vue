@@ -60,8 +60,6 @@
 </template>
 
 <script>
-import vhCheck from 'vh-check';
-
 export default {
   async asyncData({ $content, params, error }) {
     const page = await $content('index')
@@ -75,14 +73,9 @@ export default {
     };
   },
 
-  mounted() {
-    this.vhTest = vhCheck();
-  },
-
   data() {
     return {
       title: 'Pavlos Papaefstathiou',
-      vhTest: { },
     };
   },
 
@@ -126,6 +119,28 @@ export default {
   }
   60% {
     transform: translateY(-15px);
+  }
+}
+
+/* fixiing vh feature on iOS */
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+  .is-fullheight {
+    height: 1024px;
+  }
+}
+
+/* iPad with landscape orientation. */
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {
+  .is-fullheight {
+      height: 768px;
+  }
+}
+
+/* iPhone 5 
+You can also target devices with aspect ratio. */
+@media screen and (device-aspect-ratio: 40/71) {
+  .is-fullheight {
+    height: 500px;
   }
 }
 </style>
